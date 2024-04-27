@@ -12,7 +12,7 @@ pipeline {
                 }
             }
         }
-        stage('Geto Dateo') {
+        stage('Get Date') {
             steps {
                 script {
                     // Call the method from the shared library
