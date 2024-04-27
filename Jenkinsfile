@@ -16,7 +16,7 @@ pipeline {
        stage('Get Date') {
             steps {
                 script {
-                    def dateUtils = DateUtils() 
+                    def GetDate = DateUtils() 
                    // def currentDate = dateUtils.getCurrentDateTime() // Call the method
                     // echo "Current date and time: ${currentDate}"
             
