@@ -1,17 +1,19 @@
 @Library('my-global-shared-library') _
 
+
 pipeline {
     agent any
+    
     stages {
-             
-        stage('Say Hello') {
+        stage('Example') {
             steps {
                 script {
                     // Call the function from the shared library
-                    greetings.greet('Alice')
+                    def message = MySharedLibrary.greetings()
+                    echo message
                 }
             }
         }
     }
 }
-        
+   
