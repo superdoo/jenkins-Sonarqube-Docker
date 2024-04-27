@@ -8,7 +8,7 @@ pipeline {
         stage('Example') {
             steps {
                 script {
-                    helloWorld("Michael","Moonday")
+                    helloWorld("Michael","Moonday",''you are a gem)
                 }
             }
         }
