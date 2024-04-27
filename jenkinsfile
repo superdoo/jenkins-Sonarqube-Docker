@@ -3,14 +3,14 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('something to do') {
             steps {
                 // Call a function from the shared library
                 mySharedFunction()
             }
         }
         
-        stage('Example') {
+        stage('greetings') {
             steps {
                 script {
                     // Call the function from the shared library
