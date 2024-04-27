@@ -12,17 +12,14 @@ pipeline {
                 }
             }
         }
-
-       stage('Get Date') {
+ stage('Geto Dateo') {
             steps {
                 script {
-                    def GetDate = GetDate() 
-                   // def currentDate = dateUtils.getCurrentDateTime() // Call the method
-                    // echo "Current date and time: ${currentDate}"
-            
+                    // Call the method from the shared library
+                    def currentDate = GetDate.getCurrentDateTime()
+                    echo "Current date and time: ${currentDate}"
                 }
             }
-        }
     }
 }
    
