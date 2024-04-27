@@ -13,13 +13,20 @@ pipeline {
             }
         }
 
-       stage('Getting The Date') {
-            steps { 
+       stage('Get Date') {
+            steps {
                 script {
-                    currentClock()
+                    // Load the DateUtils class
+                    def dateUtils = load 'GetDate.groovy'
+                    
+                    // Call the getCurrentDateTime() method
+                    def currentDate = DateUtils.getCurrentDateTime()
+                    
+                    // Print the current date and time
+                    echo "Current date and time: ${currentDate}"
                 }
             }
-        }  
+        }
     }
 }
    
