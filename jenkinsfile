@@ -9,5 +9,15 @@ pipeline {
                 mySharedFunction()
             }
         }
+        
+        stage('Example') {
+            steps {
+                script {
+                    // Call the function from the shared library
+                    my-global-shared-library.greet('Alice')
+                }
+            }
+        }
     }
 }
+        
