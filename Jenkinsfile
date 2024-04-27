@@ -8,7 +8,7 @@ pipeline {
         stage('Simple Hello') {
             steps {
                 script {
-                    helloWorld("Michael","Moonday","you are a gem")
+                    helloWorld("Michael","Monday","you are a gem")
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
        stage('Getting The Date') {
             steps { 
                 script {
-                    currentDate()
+                    currentClock()
                 }
             }
         }  
