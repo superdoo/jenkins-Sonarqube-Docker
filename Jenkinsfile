@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     // Call the function from the shared library
-                    def message = MySharedLibrary.greetings()
+                    def message = greetings.greetings()
                     echo message
                 }
             }
