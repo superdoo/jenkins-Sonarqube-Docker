@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     // Call the function from the shared library
-                    my-global-shared-library.greet('Alice')
+                    greetings.greet('Alice')
                 }
             }
         }
