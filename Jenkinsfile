@@ -17,13 +17,10 @@ pipeline {
             steps {
                 script {
                     // Load the DateUtils class
-                    def dateUtils = load 'GetDate.groovy'
-                    
-                    // Call the getCurrentDateTime() method
-                    def currentDate = DateUtils.getCurrentDateTime()
-                    
-                    // Print the current date and time
+                    def dateUtils = DateUtils() 
+                    def currentDate = dateUtils.getCurrentDateTime() // Call the method
                     echo "Current date and time: ${currentDate}"
+            
                 }
             }
         }
