@@ -12,12 +12,13 @@ pipeline {
             } 
         }
     
-      stage('SonarQube Analysis') {
+            stage('SonarQube Analysis') {
             steps {
                 script {
+                    def sonarQubeUtils = new SonarQubeUtils() // Instantiate the SonarQubeUtils class
                     def projectName = 'Onix-website-scan'
-                    def projectKey = 'sonar.projectKey=Onix-website-scan'
-                    SonarQubeUtils.callSonarQubeScanner(projectName, projectKey)
+                    def projectKey = 'Onix-website-scan'
+                    sonarQubeUtils.callSonarQubeScanner(projectName, projectKey)
                 }
             }
         }
