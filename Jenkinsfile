@@ -12,10 +12,13 @@ pipeline {
             } 
         }
     
-    stage('SonarQube Analysis') {
-        def scannerHome = tool 'SonarScanner';
-        withSonarQubeEnv() {
-        sh "${scannerHome}/bin/sonar-scanner"
+      stage('SonarQube Analysis') {
+            steps {
+                script {
+                    def projectName = 'Onix-website-scan'
+                    def projectKey = 'sonar.projectKey=Onix-website-scan'
+                    SonarQubeUtils.callSonarQubeScanner(projectName, projectKey)
+                }
             }
         }
         stage('Simple Hello') {
