@@ -24,8 +24,7 @@ pipeline {
                 script {
                     def sonarQubeUtils = new SonarQubeUtils() // Instantiate the SonarQubeUtils class
                     def projectName = 'Onix-website-scan'
-                    def projectKey = 'Onix-website-scan'
-                    def scannerHome = '/path/to/sonar-scanner'
+                    def projectKey = 'sonar.projectKey=Onix-website-scan'
                     sonarQubeUtils.callSonarQubeScanner(projectName, projectKey)
                 }
             }
