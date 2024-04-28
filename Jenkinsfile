@@ -7,12 +7,6 @@ pipeline {
  
     stages {
 
-           
-             
-
-
-
-
         stage('SCM') {
             steps{
                 checkout scm
@@ -32,7 +26,7 @@ pipeline {
         stage('Simple Hello') {
             steps {
                 script {
-                    helloWorld("Michael","Monday","you are a gem")
+                    helloWorld("Michael","Sunday", "This sucks, I'm struggling my ass off to make this work")
                 }
             }
         }
