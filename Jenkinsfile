@@ -4,8 +4,7 @@
 pipeline {
     agent any
 
-      def scanneroHome = tool 'SonarScanner'
-    
+ 
     stages {
 
            
