@@ -7,7 +7,7 @@ pipeline {
  
     stages {
 
-        stage('SCM') {
+        /*stage('SCM') {
             steps{
                 checkout scm
             } 
@@ -23,6 +23,7 @@ pipeline {
                 }
             }
         }
+        */
         stage('Simple Hello') {
             steps {
                 script {
