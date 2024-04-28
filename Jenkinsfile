@@ -3,8 +3,16 @@
 
 pipeline {
     agent any
+
+      def scannerHome = tool 'SonarScanner'
     
     stages {
+
+           
+             
+
+
+
 
         stage('SCM') {
             steps{
@@ -18,6 +26,7 @@ pipeline {
                     def sonarQubeUtils = new SonarQubeUtils() // Instantiate the SonarQubeUtils class
                     def projectName = 'Onix-website-scan'
                     def projectKey = 'Onix-website-scan'
+                    def scannerHome = '/path/to/sonar-scanner'
                     sonarQubeUtils.callSonarQubeScanner(projectName, projectKey)
                 }
             }
