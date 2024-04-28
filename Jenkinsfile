@@ -5,6 +5,21 @@ pipeline {
     agent any
     
     stages {
+
+        stage('SCM') {
+                 checkout scm
+             }
+
+
+
+
+
+
+
+
+
+
+
         stage('Simple Hello') {
             steps {
                 script {
